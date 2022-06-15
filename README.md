@@ -46,6 +46,8 @@ class Solution(object):
 ```
 
 ## 2. Remove duplicates from list
+Input: [1,1,2,3,3]
+Output: [1,2,3]
 ```
         dict_uniq = {}
         list_uniq = []
@@ -57,4 +59,4 @@ class Solution(object):
         for key in dict_uniq:
             list_uniq.append(key)
         return sorted(list_uniq)
-        ```
+ ```
