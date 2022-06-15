@@ -60,3 +60,23 @@ Output: [1,2,3]
             list_uniq.append(key)
         return sorted(list_uniq)
  ```
+
+## 3. Length of Last Word
+Example 1:
+
+Input: s = "Hello World"
+Output: 5
+Explanation: The last word is "World" with length 5.
+
+```
+class Solution(object):
+    def lengthOfLastWord(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+     
+        ls_sen = s.strip().split()
+        return  len(ls_sen[len(ls_sen)-1])
+        
+```
