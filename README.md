@@ -63,3 +63,15 @@ class Solution(object):
         return  len(ls_sen[len(ls_sen)-1])
         
 ```
+## 4. Palindrome Number
+Given an integer x, return true if x is palindrome integer.
+```
+class Solution(object):
+    def isPalindrome(self, x):
+        """
+        :type x: int
+        :rtype: bool
+        """
+        return str(x) == str(x)[::-1]
+            
+```
