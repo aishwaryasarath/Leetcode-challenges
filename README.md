@@ -44,3 +44,17 @@ class Solution(object):
             seen_dict[n] = i
         return
 ```
+
+## 2. Remove duplicates from list
+```
+        dict_uniq = {}
+        list_uniq = []
+        for num in head:
+            if num not in dict_uniq:
+                dict_uniq[num]=1
+            else:
+                dict_uniq[num]+=1
+        for key in dict_uniq:
+            list_uniq.append(key)
+        return sorted(list_uniq)
+        ```
