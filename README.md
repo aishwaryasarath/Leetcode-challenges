@@ -82,16 +82,16 @@ class Solution(object):
         :type strs: List[str]
         :rtype: str
         """
-        dict_test = {}
+        dict_prefix = {}
         list_substr = []
 
         count_max = len(max(strs, key=len))
 
         for count in range(0, count_max):
             for word in strs:
-                dict_test[word[0:count+1]]= dict_test.get(word[0:count+1],0)+1
-        print(dict_test)
-        for k,v in dict_test.items():
+                dict_prefix[word[0:count+1]]= dict_prefix.get(word[0:count+1],0)+1
+        #print(dict_prefix)
+        for k,v in dict_prefix.items():
             if v == len(strs):
                 list_substr.append(k)
         return max(list_substr)
