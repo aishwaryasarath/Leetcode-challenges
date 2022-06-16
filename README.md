@@ -14,11 +14,7 @@ Only one valid answer exists.
 ```
 class Solution(object):
     def twoSum(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
-        """
+       
         seen_dict = {}
         for i, n in enumerate(nums):
             diff = target - n
@@ -77,6 +73,7 @@ class Solution(object):
 ```
 
 ## 5. Longest Common Prefix
+```
 class Solution(object):
     def longestCommonPrefix(self, strs):
         """
@@ -97,3 +94,4 @@ class Solution(object):
                 list_substr.append(k)
         return max(list_substr)
         
+```
