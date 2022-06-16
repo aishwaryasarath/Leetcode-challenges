@@ -75,3 +75,25 @@ class Solution(object):
         return str(x) == str(x)[::-1]
             
 ```
+
+## 5. Longest Common Prefix
+class Solution(object):
+    def longestCommonPrefix(self, strs):
+        """
+        :type strs: List[str]
+        :rtype: str
+        """
+        dict_test = {}
+        list_substr = []
+
+        count_max = len(max(strs, key=len))
+
+        for count in range(0, count_max):
+            for word in strs:
+                dict_test[word[0:count+1]]= dict_test.get(word[0:count+1],0)+1
+        print(dict_test)
+        for k,v in dict_test.items():
+            if v == len(strs):
+                list_substr.append(k)
+        return max(list_substr)
+        
