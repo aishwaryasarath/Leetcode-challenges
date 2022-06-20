@@ -128,7 +128,7 @@ class Solution(object):
 ```
 
  ## 8. Pandas drop rows with blanks
- 
+ ```
 import pandas as pd
 import numpy as np
 # dictionary with list object in values
@@ -144,3 +144,4 @@ df = pd.DataFrame(details)
 df.replace(' ',np.nan, inplace=True)
 
 df.dropna()
+```
