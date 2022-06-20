@@ -127,4 +127,20 @@ class Solution(object):
         return s == s[::-1]
 ```
 
+ ## 8. Pandas drop rows with blanks
  
+import pandas as pd
+import numpy as np
+# dictionary with list object in values
+details = {
+	'Name' : ['CDF', 'ABC', 'GHI', 'JKL'],
+	'Age' : [23, 21, 22, 21],
+	'University' : ['BHU', 'JNU', ' ', ' '],
+}
+
+# creating a Dataframe object
+df = pd.DataFrame(details)
+
+df.replace(' ',np.nan, inplace=True)
+
+df.dropna()
